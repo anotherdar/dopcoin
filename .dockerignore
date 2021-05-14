@@ -1,0 +1,6 @@
+# remove from the image all the node files
+node_modules
+# remove git we don't need it in our container
+.git
+# remove Dockerfile
+dockerfile
