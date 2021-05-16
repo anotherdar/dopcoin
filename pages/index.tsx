@@ -4,6 +4,10 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { DopCard, TDopCard } from '@components/Card'
 import { DopNav } from '@components/Navigation'
+import { Footer } from '@components/Footer'
+import { Data, PostCard } from '@components/PostCard'
+import { DopHead } from '@components/DopHead'
+import { Routes } from 'utils/routes'
 
 
 
@@ -37,17 +41,13 @@ const cardInfos: Array<TDopCard> = [
 export default function Home() {
   return (
     <div className="w-full">
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Dopcoin – La Mejor Opción para Comprar y Vender Activos Digitales.</title>
-        <link rel="icon" href="/Dopcoin.png" />
-      </Head>
+      <DopHead title='Dopcoin – La Mejor Opción para Comprar y Vender Activos Digitales.'>
+        <meta name="description" content="La mejor opción para comprar y vender activos digitales de forma rápida, sencilla y segura." />
+      </DopHead>
       {/* header */}
-      <header className="h-screen m-auto px-5 md:px-10 overflow-hidden">
+      <header className="h-screen m-auto px-5 md:px-10 xl:px-16 overflow-hidden">
         {/* nav menu */}
-        <div className='sticky top-0 left-0 bg-white'>
-          <DopNav />
-        </div>
+        <DopNav />
 
         <div className="h-5/6 xl:p-10">
           <div className="h-full grid grid-rows-2 md:grid-rows-none md:grid-cols-2">
@@ -58,12 +58,12 @@ export default function Home() {
               <motion.div animate={{
                 y: [1000, 0]
               }} className='controls w-full py-5 md:py-8 flex justify-center items-center md:justify-start'>
-                <Link href='/'>
+                <Link href={Routes.signUp}>
                   <a className='rounded-md uppercase border-2 border-transparent bg-blue-700 text-white py-2 px-3 md:px-5 mr-5 text-xs md:font-normal hover:bg-blue-600 transition-colors duration-300'>
                     Crear Cuenta
                     </a>
                 </Link>
-                <Link href='/'>
+                <Link href={Routes.signIn}>
                   <a className='rounded-md uppercase border-solid border-2 border-blue-700 text-blue-700 py-2 px-3 md:px-5 text-xs md:font-normal hover:bg-blue-700 hover:text-white transition-colors duration-300'>
                     Iniciar sesión
                     </a>
@@ -102,7 +102,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="container m-auto bg-gray-100 p-5 py-10">
+      <section className="bg-gray-100 p-5 py-10">
         <div className='text-center'>
           <h1 className='text-gray-800 text-xl font-bold'>¿Listo para ordenar?</h1>
           <p className='text-gray-700 text-sm font-medium'>Ordenar es facil y sencillo</p>
@@ -115,6 +115,20 @@ export default function Home() {
           }
         </div>
       </section>
+      <section className="md:h-screen bg-gray-200 p-5 py-10">
+        <div className='text-center py-5'>
+          <h1 className='text-gray-800 text-xl font-bold'>Noticias Destacadas</h1>
+        </div>
+        <div className="flex flex-col md:flex-row items-center justify-center p-5 w-full">
+          {
+            Data.map(post => {
+              return <PostCard key={post.path} {...post} />
+            })
+          }
+        </div>
+      </section>
+
+      <Footer />
     </div>
   )
 }

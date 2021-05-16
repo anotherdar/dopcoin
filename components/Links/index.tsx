@@ -9,7 +9,7 @@ type TDopLink = {
 
 export const DopLink: FC<TDopLink> = ({ name, path, isBtn = false }) => {
     return !isBtn ? <Link href={path}>
-        <a className='px-3 xl:px-10 uppercase font-medium text-xs xl:text-base hover:text-blue-700 transition-colors duration-150'>
+        <a className='px-3 xl:px-5 uppercase font-medium text-xs xl:text-base hover:text-blue-700 transition-colors duration-150'>
             {name}
         </a>
     </Link> :

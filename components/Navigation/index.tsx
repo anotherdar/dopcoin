@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { HiMenu } from 'react-icons/hi'
 import { DopLink } from '@components/Links'
 import Image from 'next/image'
+import Link from 'next/link';
 
 const routes = [
     { name: 'Inicio', path: '/' },
@@ -12,28 +13,35 @@ const routes = [
 ]
 export const DopNav: FC = () => {
     return (
-        <motion.nav animate={{
+        <motion.div animate={{
             y: [-100, 0]
-        }} className="h-1/6  flex justify-between items-center">
-            <div className='logo w-32 md:w-40 xl:ml-16'>
-                <Image src='/Dopcoin_logo.svg' height='75px' width='' />
-            </div>
+        }} className='h-1/6 '>
+            <nav className="h-full flex justify-between items-center xl:px-16">
 
-            <button className='md:hidden'>
-                <HiMenu size='2em' className="text-gray-800" />
-            </button>
+                <div className='logo w-32 md:w-40'>
+                    <Link href='/'>
+                        <a>
+                            <Image className='cursor-pointer' src='/Dopcoin_logo.svg' height='75px' width='' />
+                        </a>
+                    </Link>
+                </div>
 
-            {/* options */}
-            <ul className='hidden md:flex'>
-                {routes.map(r => {
-                    return <li key={r.name}>
-                        <DopLink {...r} />
+                <button className='md:hidden'>
+                    <HiMenu size='2em' className="text-gray-800" />
+                </button>
+
+                {/* options */}
+                <ul className='hidden md:flex'>
+                    {routes.map(r => {
+                        return <li key={r.name}>
+                            <DopLink {...r} />
+                        </li>
+                    })}
+                    <li>
+                        <DopLink isBtn name='Contacto' path='/contacto' />
                     </li>
-                })}
-                <li>
-                    <DopLink isBtn name='Contacto' path='/contacto' />
-                </li>
-            </ul>
-        </motion.nav>
+                </ul>
+            </nav>
+        </motion.div>
     )
 }

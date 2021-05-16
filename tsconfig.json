@@ -11,6 +11,7 @@
       "@components/*": ["components/*"],
       "@shared/*": ["shared/*"],
       "@layouts/*": ["layouts/*"],
+      "@hooks/*": ["hooks/*"],
     },
     "allowJs": true,
     "skipLibCheck": true,
