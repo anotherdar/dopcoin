@@ -13,7 +13,7 @@ import { Routes } from 'utils/routes'
 
 const cardInfos: Array<TDopCard> = [
   {
-    img: '/wallet.svg',
+    img: '/Wallet.svg',
     path: '/comprar',
     options: [
       'Bitcoins.',
