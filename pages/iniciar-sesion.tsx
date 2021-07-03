@@ -10,7 +10,7 @@ import { Routes } from "utils/routes";
 export default function Page() {
     return (
         <AccountLayout title='Iniciar sesion'>
-            <motion.div animate={{y: [1000, 0]}} className='bg-blue-700 p-2 rounded-lg h-5/6 xl:w-3/5 w-11/12 md:flex shadow-lg'>
+            <motion.div animate={{y: [1000, 0]}} className='bg-blue-700 p-2 mt-10 rounded-lg h-5/6 xl:w-3/5 w-11/12 md:flex shadow-lg mb-20'>
                 <div className='hidden w-3/5 md:flex items-center justify-center'>
                     <h1 className='text-white text-xl'>¡Bienvenido!</h1>
                 </div>
@@ -35,7 +35,7 @@ export default function Page() {
                             <Link href={Routes.forgotPassword}><a className='text-xs text-gray-400 font-semibold text-center my-3'>¿Has olvidado tu <span className='text-blue-700'>contraseña</span>?</a></Link>
                         </div>
                     </div>
-                    <div className='w-full flex px-5 flex-col'>
+                    <div className='w-full flex px-5 flex-col mb-5'>
                         <button className='w-full mb-4 rounded-md uppercase border-2 border-transparent bg-blue-700 text-white py-2 px-3 md:px-5 text-xs md:font-normal hover:bg-blue-600 transition-colors duration-300'>Iniciar sesión</button>
                         <DopButton path={Routes.signUp} name='Crear cuenta'/>
                     </div>
