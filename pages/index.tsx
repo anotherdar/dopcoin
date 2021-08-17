@@ -58,12 +58,12 @@ export default function Home() {
                 y: [1000, 0]
               }} className='controls w-full py-5 md:py-8 flex justify-center items-center md:justify-start'>
                 <Link href={Routes.signUp}>
-                  <a className='rounded-md uppercase border-2 border-transparent bg-blue-700 text-white py-2 px-3 md:px-5 mr-5 text-xs md:font-normal hover:bg-blue-600 transition-colors duration-300'>
+                  <a className='rounded-md uppercase border-2 border-transparent dop-bg text-white py-2 px-3 md:px-5 mr-5 text-xs md:font-normal hover:bg-blue-500 transition-colors duration-300'>
                     Crear Cuenta
                     </a>
                 </Link>
                 <Link href={Routes.signIn}>
-                  <a className='rounded-md uppercase border-solid border-2 border-blue-700 text-blue-700 py-2 px-3 md:px-5 text-xs md:font-normal hover:bg-blue-700 hover:text-white transition-colors duration-300'>
+                  <a className='rounded-md uppercase border-solid border-2 dop-border dop-text py-2 px-3 md:px-5 text-xs md:font-normal hover:bg-blue-500 hover:text-white transition-colors duration-300'>
                     Iniciar sesión
                     </a>
                 </Link>
@@ -87,7 +87,7 @@ export default function Home() {
             <Image src='/Team.svg' height='500px' width='500px' />
           </div>
         </div>
-        <div className='bg-blue-700 w-full h-full flex flex-col items-center md:block p-10'>
+        <div className='dop-bg w-full h-full flex flex-col items-center md:block p-10'>
           <div className='visible md:hidden'>
             <Image src='/Team.svg' height='250px' width='250px' />
           </div>

@@ -18,3 +18,18 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --main-color: #0078E7;
+}
+
+.dop-bg {
+  background-color: var(--main-color);
+}
+.dop-text {
+  color: var(--main-color);
+}
+
+.dop-border {
+  border-color: var(--main-color);
+}

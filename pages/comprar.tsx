@@ -12,7 +12,7 @@ import { BsPersonFill } from 'react-icons/bs'
 export default function Page() {
     return (
         <AccountLayout title='Comprar'>
-            <div className='bg-blue-700 p-2 rounded-lg h-5/6 xl:w-3/5 w-11/12 md:flex shadow-lg'>
+            <div className='dop-bg p-2 rounded-lg h-5/6 xl:w-3/5 w-11/12 md:flex shadow-lg'>
                 <div className='hidden w-3/5 md:flex items-center justify-center'>
                     <h1 className='text-white text-xl'>¡Formulario de compra!</h1>
 
@@ -25,7 +25,7 @@ export default function Page() {
                         <div className='w-full flex items-center justify-center py-5'>
                             <Image src='/Wallet.svg' width='48px' height='48px' />
                         </div>
-                        <p className='text-blue-700 text-xs font-medium text-center'>
+                        <p className='dop-text text-xs font-medium text-center'>
                             Por favor indique los datos solicitados a continuación para proceder con el inicio de su orden de compra
                         </p>
                     </div>
@@ -95,10 +95,10 @@ export default function Page() {
                         </label>
 
                         <div className='my-5'>
-                            <button type='submit' className='mb-5 w-full font-semibold bg-blue-700 text-white uppercase text-xs p-2 hover:bg-blue-800 transition-all duration-300'>
+                            <button type='submit' className='mb-5 w-full font-semibold dop-bg text-white uppercase text-xs p-2 hover:bg-blue-500 transition-all duration-300'>
                                 comprar
                             </button>
-                            <button type='submit' className='w-full text-blue-700 uppercase font-semibold text-xs p-2 hover:bg-blue-700 hover:text-white transition-all duration-300'>
+                            <button type='submit' className='w-full dop-text uppercase font-semibold text-xs p-2 hover:dop-bg hover:text-white transition-all duration-300'>
                                 vender
                             </button>
                         </div>
