@@ -114,7 +114,8 @@ export default function Home() {
           }
         </div>
       </section>
-      <section className="md:h-screen bg-gray-200 p-5 py-10">
+
+      {/* <section className="md:h-screen bg-gray-200 p-5 py-10">
         <div className='text-center py-5'>
           <h1 className='text-gray-800 text-xl font-bold'>Noticias Destacadas</h1>
         </div>
@@ -125,7 +126,7 @@ export default function Home() {
             })
           }
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>

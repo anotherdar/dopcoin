@@ -1,5 +1,5 @@
 import { Account } from "@components/Account";
-import { AccountLayout } from "@layouts/Accounts";
+import { DopLayout } from "@layouts/Accounts";
 import { motion } from "framer-motion";
 import { DopButton } from '@components/Buttons';
 import { Routes } from 'utils/routes';
@@ -7,7 +7,7 @@ import { Routes } from 'utils/routes';
 
 export default function Page() {
     return (
-        <AccountLayout title='Crear cuenta'>
+        <DopLayout title='Crear cuenta'>
             <motion.div animate={{ y: [1000, 0] }} className='mt-10 dop-bg p-2 rounded-lg h-5/6 xl:w-3/5 w-full md:flex shadow-lg'>
                 <div className='hidden w-3/5 md:flex items-center justify-center'>
                     <h1 className='text-white text-xl'>¡Encantado de conocerte!</h1>
@@ -57,6 +57,6 @@ export default function Page() {
 
                 </div>
             </motion.div>
-        </AccountLayout>
+        </DopLayout>
     )
 }

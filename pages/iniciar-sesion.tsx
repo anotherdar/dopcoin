@@ -1,6 +1,6 @@
 import { Account } from "@components/Account";
 import { DopButton } from "@components/Buttons";
-import { AccountLayout } from "@layouts/Accounts";
+import { DopLayout } from "@layouts/Accounts";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsFillPersonFill } from 'react-icons/bs'
@@ -9,7 +9,7 @@ import { Routes } from "utils/routes";
 
 export default function Page() {
     return (
-        <AccountLayout title='Iniciar sesion'>
+        <DopLayout title='Iniciar sesion'>
             <motion.div animate={{y: [1000, 0]}} className='dop-bg p-2 mt-10 rounded-lg h-5/6 xl:w-3/5 w-11/12 md:flex shadow-lg mb-20'>
                 <div className='hidden w-3/5 md:flex items-center justify-center'>
                     <h1 className='text-white text-xl'>¡Bienvenido!</h1>
@@ -41,6 +41,6 @@ export default function Page() {
                     </div>
                 </div>
             </motion.div>
-        </AccountLayout>
+        </DopLayout>
     )
 }

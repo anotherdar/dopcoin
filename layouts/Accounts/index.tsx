@@ -2,7 +2,7 @@ import { FC } from "react";
 import { DopHead } from '@components/DopHead';
 import {DopNav} from '@components/Navigation';
 
-export const AccountLayout: FC<{title: string}> = (props) => {
+export const DopLayout: FC<{title: string}> = (props) => {
     return (
         <>
             <DopHead title={`Dopcoin - ${props.title}`} />
