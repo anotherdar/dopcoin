@@ -12,7 +12,7 @@ const Noticias: NextPage<Props> = ({ news }) => {
         <DopLayout title='Noticias'>
             <div className='px-3 xl:px-48 flex items-center'>
 
-                <ul className='container'>
+                <ul className='container border-l-2 pl-4 border-dashed'>
                     {
                         news.map(n => {
                             return <li key={n.id}>
