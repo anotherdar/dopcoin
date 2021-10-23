@@ -32,7 +32,7 @@ export const DopNav: FC = () => {
             <Sidebar isOpen={isOpen} onClose={handleToggle}/>
         <motion.div animate={{
             y: [-100, 0]
-        }} className='h-1/6 '>
+        }} className='h-1/6 container mx-auto'>
             <nav className="h-full flex justify-between items-center xl:px-16">
 
                 <div className='logo w-32 md:w-40'>

@@ -2,16 +2,17 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { IoArrowBackOutline } from 'react-icons/io5'
-
 const NotFound = () => {
     return (
         <div className='h-screen flex items-center justify-center flex-col'>
-            <Image className='cursor-pointer' src='/Dopcoin_logo.svg' height='75px' width='' />
-            <h1>Lo sentimos!, no disponible en estos momentos</h1>
+            <Image src='/Dopcoin_logo.svg' height='75px' width='' />
+            <h1 className='dop-text text-9xl my-4'>404</h1>
+            <h1 className=''>Lo sentimos!, no disponible en estos momentos</h1>
 
             <Link href='/'>
-                <a className='dop-text py-2 flex items-center justify-center'> <IoArrowBackOutline size={24} className='text-gray-800'/> Volver</a>
+                <a className='dop-text py-1 px-8 rounded flex items-center justify-center my-6 text-white dop-bg'>
+                    <span className='text-white'>inicio</span>
+                </a>
             </Link>
         </div>
     )

@@ -10,6 +10,10 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 a {
   color: inherit;
   text-decoration: none;

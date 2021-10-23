@@ -12,6 +12,7 @@
       "@shared/*": ["shared/*"],
       "@layouts/*": ["layouts/*"],
       "@hooks/*": ["hooks/*"],
+      "@sections/*": ["sections/*"],
     },
     "allowJs": true,
     "skipLibCheck": true,
